@@ -30,8 +30,8 @@ COPY --from=builder /app/scripts ./scripts
 RUN corepack enable pnpm
 RUN apk add --no-cache postgresql-client
 
-EXPOSE 3000
-ENV PORT=3000
+EXPOSE 5000
+ENV PORT=5000
 ENV HOSTNAME="0.0.0.0"
 
 CMD ["sh", "-c", "pnpm migrate && pnpm start"]
